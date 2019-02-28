@@ -5,9 +5,9 @@
   <subtitle>克制与专注</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://www.dualbear.com/"/>
   <updated>2019-02-27T10:04:54.689Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://www.dualbear.com/</id>
   
   <author>
     <name>DualBear</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2019/02/27/hello-world/"/>
-    <id>http://yoursite.com/2019/02/27/hello-world/</id>
+    <link href="https://www.dualbear.com/2019/02/27/hello-world/"/>
+    <id>https://www.dualbear.com/2019/02/27/hello-world/</id>
     <published>2019-02-27T10:04:54.689Z</published>
     <updated>2019-02-27T10:04:54.689Z</updated>
     
