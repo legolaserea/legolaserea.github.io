@@ -6,7 +6,7 @@
   <link href="/legolaserea.github.io/atom.xml" rel="self"/>
   
   <link href="https://www.dualbear.com/"/>
-  <updated>2019-02-28T08:25:33.630Z</updated>
+  <updated>2019-02-28T12:23:53.146Z</updated>
   <id>https://www.dualbear.com/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>测试</title>
+    <link href="https://www.dualbear.com/2019/02/28/%E6%B5%8B%E8%AF%95/"/>
+    <id>https://www.dualbear.com/2019/02/28/测试/</id>
+    <published>2019-02-28T10:58:54.000Z</published>
+    <updated>2019-02-28T12:23:53.146Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="测试下"><a href="#测试下" class="headerlink" title="测试下"></a>测试下</h1>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;测试下&quot;&gt;&lt;a href=&quot;#测试下&quot; class=&quot;headerlink&quot; title=&quot;测试下&quot;&gt;&lt;/a&gt;测试下&lt;/h1&gt;
+      
+    
+    </summary>
+    
+      <category term="随想" scheme="https://www.dualbear.com/categories/%E9%9A%8F%E6%83%B3/"/>
+    
+    
+      <category term="随想" scheme="https://www.dualbear.com/tags/%E9%9A%8F%E6%83%B3/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
     <link href="https://www.dualbear.com/2014/11/01/hello-world/"/>
     <id>https://www.dualbear.com/2014/11/01/hello-world/</id>
     <published>2014-11-01T12:10:33.000Z</published>
-    <updated>2019-02-28T08:25:33.630Z</updated>
+    <updated>2019-02-28T12:23:25.008Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span></span><br></pre></td></tr></table></figure></p><table><thead><tr><th>项目</th><th style="text-align:right">价格</th><th style="text-align:center">数量</th></tr></thead><tbody><tr><td>计算机</td><td style="text-align:right">\$1600</td><td style="text-align:center">5</td></tr><tr><td>手机</td><td style="text-align:right">\$12</td><td style="text-align:center">12</td></tr><tr><td>管线</td><td style="text-align:right">\$1</td><td style="text-align:center">234</td></tr></tbody></table><p>: 是对齐方向</p><p>JavaScript 示例：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">nth element in the fibonacci series.</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fib</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>, b = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">document</span>.write(fib(<span class="number">10</span>));</span><br></pre></td></tr></table></figure></p><p>！三个反引号之间没有空格</p>]]></content>
     
@@ -34,6 +59,10 @@
     
     </summary>
     
+      <category term="javascript" scheme="https://www.dualbear.com/categories/javascript/"/>
+    
+    
+      <category term="javascript" scheme="https://www.dualbear.com/tags/javascript/"/>
     
   </entry>
   
