@@ -133,7 +133,7 @@
 <meta property="og:description" content="前言 走上了VPS这条不归路, 就意味着需要会维护以及运营自己的服务器. 那么这一章记录一下学习Nginx的一些东西…本文绝大部分内容来自NGINX 网站的官方手册:https://www.nginx.com/resources/admin-guide/installing-nginx-open-source/http://nginx.org/en/docs/beginners_guide.ht">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://cdn.yangbingdong.com/NGINX.png">
-<meta property="og:updated_time" content="2019-02-28T14:24:34.954Z">
+<meta property="og:updated_time" content="2019-03-01T03:57:28.040Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NGINX初学指南(安装与简单配置)">
 <meta name="twitter:description" content="前言 走上了VPS这条不归路, 就意味着需要会维护以及运营自己的服务器. 那么这一章记录一下学习Nginx的一些东西…本文绝大部分内容来自NGINX 网站的官方手册:https://www.nginx.com/resources/admin-guide/installing-nginx-open-source/http://nginx.org/en/docs/beginners_guide.ht">
@@ -766,7 +766,7 @@
 <p>首先, 创建 <code>/data/www</code> 目录并且将一个名为 <code>index.html</code> 文件放进去, 然后在创建一个 <code>/data/images</code> 目录并放置一些图片在里面. </p>
 <p>接下来, 打开配置文件. 默认的配置文件已经包含了一些 <code>server</code> 块的例子, 通常都被注释掉了. 那么现在, 注释掉全部块并且编写一个新的 <code>server</code>块吧: </p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">http &#123;</span><br><span class="line">    server &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>通常地, 配置文件可能包含了一些 <code>server</code> 块, 通过<strong><em><a href="http://nginx.org/en/docs/http/ngx_http_core_module.html#listen" target="_blank" rel="noopener">监听</a></em></strong>端口和<strong><em><a href="http://nginx.org/en/docs/http/server_names.html" target="_blank" rel="noopener">服务器名字</a></em></strong>来<strong><em><a href="http://nginx.org/en/docs/http/request_processing.html" target="_blank" rel="noopener">区分</a></em></strong>. 一旦 nginx 决定哪个服务处理请求, 将会试着添加以下 <code>location</code> 块到 <code>server</code> 块中: </p>
+<p>通常地, 配置文件可能包含了一些 <code>server</code> 块, 通过<strong><a href="http://nginx.org/en/docs/http/ngx_http_core_module.html#listen" target="_blank" rel="noopener">监听</a></strong>端口和<strong><a href="http://nginx.org/en/docs/http/server_names.html" target="_blank" rel="noopener">服务器名字</a></strong>来<strong><a href="http://nginx.org/en/docs/http/request_processing.html" target="_blank" rel="noopener">区分</a></strong>. 一旦 nginx 决定哪个服务处理请求, 将会试着添加以下 <code>location</code> 块到 <code>server</code> 块中: </p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">location / &#123;</span><br><span class="line">    root /data/www;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>这个 <code>location</code> 块说明了 <code>/</code> 前缀和请求中的 URI 进行比较. 对于匹配的请求, URI 将会被添加到被 <a href="http://nginx.org/en/docs/http/ngx_http_core_module.html#root" target="_blank" rel="noopener">root</a> 指令说明的路径中去, 就是到 <code>/data/www</code> 中, 形成一个在本地文件系统中的请求文件路径. 如果有多个匹配了 <code>location</code> 的块, nginx 会<strong>选择前缀最长的那个</strong>. 上面的那个 <code>location</code> 块是最短的前缀, 长度只有 1, 所以只有其他 <code>location</code> 块匹配都失败了, 这个块才会被使用. </p>
 <p>接下来, 添加第二个 <code>location</code> 块: </p>
@@ -795,7 +795,7 @@
 <figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">server&#123;</span><br><span class="line">    <span class="keyword">location</span> <span class="title">/ &#123;</span></span><br><span class="line"><span class="title">        proxy_pass</span> http://localhost:<span class="number">8080</span>/;</span><br><span class="line">    &#125;</span><br><span class="line">    localtion ~ \.(gif|jpg|png)$ &#123;</span><br><span class="line">        root /data/images;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>这个服务器将过滤以 <code>.gif</code> <code>.jpg</code> <code>.png</code> 结尾的请求, 并映射他们到 <code>/data/images</code> 目录（通过添加 URI 到 <code>root</code> 指令的参数）, 还会传递其他请求到被之前配置的被代理服务器上. </p>
 <p>要应用新配置, 要像前面章节提到的发送 <code>reload</code> 信号给 nginx. </p>
-<p>这里有<strong><em><a href="http://nginx.org/en/docs/http/ngx_http_proxy_module.html" target="_blank" rel="noopener">更多</a></em></strong>的可能更加有用的配置代理连接的指令. </p>
+<p>这里有<strong><a href="http://nginx.org/en/docs/http/ngx_http_proxy_module.html" target="_blank" rel="noopener">更多</a></strong>的可能更加有用的配置代理连接的指令. </p>
 <h2 id="快速查看配置文件的方法"><a href="#快速查看配置文件的方法" class="headerlink" title="快速查看配置文件的方法"></a>快速查看配置文件的方法</h2><p>nginx的配置放在nginx.conf文件中, 一般我们可以使用以下命令查看服务器中存在的nginx.conf文件. </p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">locate nginx.conf</span><br><span class="line">/usr/local/etc/nginx/nginx.conf</span><br><span class="line">/usr/local/etc/nginx/nginx<span class="selector-class">.conf</span><span class="selector-class">.default</span></span><br><span class="line">...<span class="number">1234</span></span><br></pre></td></tr></table></figure>
 <p>如果服务器中存在多个nginx.conf文件, 我们并不知道实际上调用的是哪个配置文件, 因此我们<strong>必须找到实际调用的配置文件</strong>才能进行修改. </p>
@@ -1014,6 +1014,32 @@
           
 
           
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                推荐阅读
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.ruanyifeng.com/blog/" title="阮一峰" target="_blank">阮一峰</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.zhangxinxu.com/" title="张鑫旭" target="_blank">张鑫旭</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.alloyteam.com/nav/" title="Web前端导航" target="_blank">Web前端导航</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.docschina.org/" title="前端文档" target="_blank">前端文档</a>
+                  </li>
+                
+              </ul>
+            </div>
           
 
           
