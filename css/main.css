@@ -2050,7 +2050,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #d005ad;
+  background: #7d40e2;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2913,4 +2913,10 @@ embed {
 }
 .links-of-blogroll-inline .links-of-blogroll-item {
   display: inline-block;
+}
+#sidebar > div.sidebar-inner > section > .site-overview {
+  width: calc(100%);
+}
+.site-description {
+  text-align: left;
 }
