@@ -132,12 +132,12 @@
 <meta property="og:site_name" content="DualBear">
 <meta property="og:description" content="apply 和 call 的区别ECMAScript 规范给所有函数都定义了 call 与 apply 两个方法，它们的应用非常广泛，它们的作用也是一模一样，只是传参的形式有区别而已。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://pnoc9e0c7.bkt.clouddn.com/js.jpg">
-<meta property="og:updated_time" content="2019-03-21T05:49:34.079Z">
+<meta property="og:image" content="https://www.dualbear.com/legolaserea.github.io/2018/05/21/JS-apply-call/js.jpg">
+<meta property="og:updated_time" content="2019-03-21T08:58:14.401Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript 中 apply 、call 的详解">
 <meta name="twitter:description" content="apply 和 call 的区别ECMAScript 规范给所有函数都定义了 call 与 apply 两个方法，它们的应用非常广泛，它们的作用也是一模一样，只是传参的形式有区别而已。">
-<meta name="twitter:image" content="http://pnoc9e0c7.bkt.clouddn.com/js.jpg">
+<meta name="twitter:image" content="https://www.dualbear.com/legolaserea.github.io/2018/05/21/JS-apply-call/js.jpg">
 
 
 
@@ -469,7 +469,7 @@
       
 
       
-        <p><img src="http://pnoc9e0c7.bkt.clouddn.com/js.jpg" alt="JS"></p>
+        <img src="/legolaserea.github.io/2018/05/21/JS-apply-call/js.jpg">
 <h2 id="apply-和-call-的区别"><a href="#apply-和-call-的区别" class="headerlink" title="apply 和 call 的区别"></a>apply 和 call 的区别</h2><p>ECMAScript 规范给所有函数都定义了 call 与 apply 两个方法，它们的应用非常广泛，它们的作用也是一模一样，只是传参的形式有区别而已。<br><a id="more"></a></p>
 <h3 id="apply"><a href="#apply" class="headerlink" title="apply( )"></a>apply( )</h3><p>apply 方法传入两个参数：一个是作为函数上下文的对象，另外一个是作为函数参数所组成的数组。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    name : <span class="string">'Dualbear'</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params">firstName, lastName</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(firstName + <span class="string">' '</span> + <span class="keyword">this</span>.name + <span class="string">' '</span> + lastName);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func.apply(obj, [<span class="string">'A'</span>, <span class="string">'B'</span>]);    <span class="comment">// A Dualbear B</span></span><br></pre></td></tr></table></figure></p>
 <p>可以看到，obj 是作为函数上下文的对象，函数 func 中 this 指向了 obj 这个对象。参数 A 和 B 是放在数组中传入 func 函数，分别对应 func 参数的列表元素。</p>
@@ -1266,21 +1266,6 @@
   
 
   
-<script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-    }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
-
 
   
   
