@@ -1999,7 +1999,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff885e;
+  background: #06f4ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2862,6 +2862,9 @@ embed {
 }
 .links-of-blogroll-inline .links-of-blogroll-item {
   display: inline-block;
+}
+.header {
+  background: url("https://github.com/legolaserea/File/blob/master/header_background.jpg?raw=true");
 }
 .header-inner {
   padding: 45px 0 25px;
